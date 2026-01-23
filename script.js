@@ -179,7 +179,7 @@ if (READ_ONLY_COORDINATORS.includes(currentUser.username)) {
         // 🔹 OPEN MODAL INSTEAD OF confirm()
         selectedEvent = info.event;
         modalTitle.textContent = info.event.title;
-        name.textContent = info.event.club_code;
+        name.textContent = ev.club_code;
         modal.style.display = "flex";
       }
     });
@@ -287,6 +287,7 @@ console.log("RAW RESPONSE:", text);
   input.value = "";
   loadNews();
 }
+
 
 
 
