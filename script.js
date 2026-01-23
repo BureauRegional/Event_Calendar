@@ -81,6 +81,7 @@ function checkPassword() {
 // ------------------ MODAL LOGIC ------------------
 const modal = document.getElementById("event-modal");
 const modalTitle = document.getElementById("modal-event-title");
+const name = document.getElementById("club_name"); 
 
 document.getElementById("close-modal").onclick = () => {
   modal.style.display = "none";
@@ -178,6 +179,7 @@ if (READ_ONLY_COORDINATORS.includes(currentUser.username)) {
         // 🔹 OPEN MODAL INSTEAD OF confirm()
         selectedEvent = info.event;
         modalTitle.textContent = info.event.title;
+        name.textContent = info.event.club_code;
         modal.style.display = "flex";
       }
     });
@@ -285,6 +287,7 @@ console.log("RAW RESPONSE:", text);
   input.value = "";
   loadNews();
 }
+
 
 
 
